@@ -8,26 +8,30 @@ class DetailsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(
-          Icons.menu,
-          size: 35,
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: const Icon(
+            Icons.arrow_back_ios,
+            size: 35,
+          ),
         ),
         centerTitle: true,
-        title:  RichText(
-          text: TextSpan(
-            style: TextStyle(fontSize: 40, color: Colors.black),
-            children: [
-              TextSpan(
-                text: 'e',
-                style: TextStyle(color: Colors.red),
-              ),
-              TextSpan(
-                text: 'valy',
-              ),
-            ],
-          )),
-
-        actions: [
+        title: RichText(
+            text: const TextSpan(
+          style: TextStyle(fontSize: 40, color: Colors.black),
+          children: [
+            TextSpan(
+              text: 'e',
+              style: TextStyle(color: Colors.red),
+            ),
+            TextSpan(
+              text: 'valy',
+            ),
+          ],
+        )),
+        actions: const [
           Icon(
             Icons.person,
             size: 35,
@@ -39,7 +43,7 @@ class DetailsPage extends StatelessWidget {
           Container(
             height: 550,
             width: 400,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 image: DecorationImage(
                     fit: BoxFit.contain,
                     image: NetworkImage(
@@ -48,7 +52,7 @@ class DetailsPage extends StatelessWidget {
           Card(
             child: Container(
               height: 70,
-              child: Row(
+              child: const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
@@ -65,8 +69,9 @@ class DetailsPage extends StatelessWidget {
             ),
           ),
           Card(
-            child: Container(height: 70,
-              child: Row(
+            child: Container(
+              height: 70,
+              child: const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
@@ -85,8 +90,9 @@ class DetailsPage extends StatelessWidget {
             child: SizedBox(
               width: MediaQuery.of(context).size.width,
               height: 50,
-              child: Text(
-                "Description",textAlign: TextAlign.left,
+              child: const Text(
+                "Description",
+                textAlign: TextAlign.left,
                 style: TextStyle(fontSize: 25),
               ),
             ),
@@ -97,22 +103,26 @@ class DetailsPage extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Icon(
+                  const Icon(
                     CupertinoIcons.heart,
                     weight: 20,
                   ),
                   MaterialButton(
                     color: Colors.pinkAccent[100],
                     onPressed: () {},
-                    child: Text(
+                    child: const Text(
                       "ADD TO CART",
                       style: TextStyle(fontSize: 20, color: Colors.white),
                     ),
                   ),
-                  MaterialButton(onPressed: () {
-
-                  },color: Colors.red,
-                  child: Text("AVAILABLE AT SHOPS",style:TextStyle(fontSize: 20,color: Colors.white),),)
+                  MaterialButton(
+                    onPressed: () {},
+                    color: Colors.red,
+                    child: const Text(
+                      "AVAILABLE AT SHOPS",
+                      style: TextStyle(fontSize: 20, color: Colors.white),
+                    ),
+                  )
                 ],
               ),
             ),

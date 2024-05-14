@@ -6,19 +6,17 @@ import 'package:flutter/widgets.dart';
 
 import 'evaly_sign.dart';
 
-///to set background image or gradient in a screen
 class SplashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Timer(Duration(seconds: 10), () {
+    Timer(const Duration(seconds: 3), () {
       Navigator.push(context, MaterialPageRoute(builder: (context) => Sign()));
     });
     return Scaffold(
       backgroundColor: Colors.red[800],
-      body: Center(
+      body: const Center(
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Image(image: AssetImage(
-              "assets/icons/bag.png")),
+          Image(image: AssetImage("assets/icons/bag.png")),
           SizedBox(
             height: 40,
           ),

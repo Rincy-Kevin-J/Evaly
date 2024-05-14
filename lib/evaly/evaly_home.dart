@@ -36,7 +36,7 @@ class _HomeState extends State<Home> {
     },
     {
       "pic":
-          "https://tse2.mm.bing.net/th?id=OIP.tAZtpLwas9yqBLsTpL9-5QHaEK&pid=Api&P=0&h=180",
+          "https://tse1.mm.bing.net/th?id=OIP.YguOkIP2xIjpoReX_q0R4gHaHa&pid=Api&P=0&h=180",
       "names": "Shoe"
     },
     {
@@ -55,16 +55,29 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          leading: Icon(
+          leading: const Icon(
             Icons.menu,
             size: 35,
           ),
           centerTitle: true,
-          title: Text(
-            "evaly",
-            style: TextStyle(fontSize: 40),
-          ),
-          actions: [
+          title:  RichText(
+              text: const TextSpan(
+                style: TextStyle(fontSize: 40, color: Colors.black),
+                children: [
+                  TextSpan(
+                    text: 'e',
+                    style: TextStyle(color: Colors.red),
+                  ),
+                  TextSpan(
+                    text: 'valy',
+                  ),
+                ],
+              )),
+          // title: Text(
+          //   "evaly",
+          //   style: TextStyle(fontSize: 40),
+          // ),
+          actions: const [
             Icon(
               Icons.person,
               size: 35,
@@ -80,7 +93,7 @@ class _HomeState extends State<Home> {
                 }
               },
               decoration: InputDecoration(
-                prefixIcon: Icon(Icons.search_outlined),
+                prefixIcon: const Icon(Icons.search_outlined),
                 fillColor: Colors.grey,
                 filled: true,
                 focusColor: Colors.blue,
@@ -91,13 +104,12 @@ class _HomeState extends State<Home> {
               ),
             ),
             Container(
-              height: 280,
+              height: 275,
               width: 430,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   image: DecorationImage(
                       fit: BoxFit.fitWidth,
-                      image: NetworkImage(
-                          "https://tse3.explicit.bing.net/th?id=OIP.wN0btflCuFYtC3QCR1ucKwHaEQ&pid=Api&P=0&h=180/th?id=OIP.wN0btflCuFYtC3QCR1ucKwHaEQ&pid=Api&P=0&h=180"))),
+                      image: NetworkImage("https://tse2.mm.bing.net/th?id=OIP.HZwQz7shWuiXcyGZGcowmgHaEK&pid=Api&P=0&h=180"))),
             ),
             Padding(
               padding: const EdgeInsets.only(left: 1),
@@ -122,16 +134,16 @@ class _HomeState extends State<Home> {
                         Text(
                           "${page[index]["name"]}",
                           style:
-                              TextStyle(fontSize: 20, color: Color(0xFF9CAFAA)),
+                              const TextStyle(fontSize: 20, color: Color(0xFF9CAFAA)),
                         ),
                       ],
                     ),
                   )),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Text(
@@ -148,7 +160,7 @@ class _HomeState extends State<Home> {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             GridView.count(

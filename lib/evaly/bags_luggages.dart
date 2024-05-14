@@ -68,11 +68,25 @@ class _BagsState extends State<Bags> {
           Icons.menu,
           size: 35,
         ),
+
         centerTitle: true,
-        title: Text(
-          "evaly",
-          style: TextStyle(fontSize: 40),
-        ),
+        title: RichText(
+            text: TextSpan(
+          style: TextStyle(fontSize: 40, color: Colors.black),
+          children: [
+            TextSpan(
+              text: 'e',
+              style: TextStyle(color: Colors.red),
+            ),
+            TextSpan(
+              text: 'valy',
+            ),
+          ],
+        )),
+        // title: Text(
+        //   "evaly",
+        //   style: TextStyle(fontSize: 40),
+        // ),
         actions: [
           Icon(
             Icons.person,
