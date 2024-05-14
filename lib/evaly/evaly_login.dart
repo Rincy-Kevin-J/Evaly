@@ -60,7 +60,6 @@ class _LoginsignState extends State<Loginsign> {
                 height: 15,
               ),
               TextFormField(
-
                 obscureText: true,
                 obscuringCharacter: "*",
                 controller: pwdcontroller,
